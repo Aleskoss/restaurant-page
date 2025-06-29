@@ -21,7 +21,8 @@ button{
   color: white;
   font-size: 24px;
 }
-button:active img{
+button:active img,
+button img{
   position: absolute;
   display: block;
   left: 34px;
@@ -29,7 +30,7 @@ button:active img{
   width: 64;
   height: 64px;
 }
-button img{
+button img.display-off{
   display: none;
 }
 nav{
