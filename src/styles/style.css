@@ -6,7 +6,42 @@
   box-sizing: border-box;
 }
 body{
-  background-image: url("../images/clem-onojeghuo-zlABb6Gke24-unsplash.jpg");
-  background-size: 100vw;
+  background-image: url("../images/noodles.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+button{
+  position: relative;
+  appearance: none;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 24px;
+}
+button:active img{
+  position: absolute;
+  display: block;
+  left: 34px;
+  top: -40px;
+  width: 64;
+  height: 64px;
+}
+button img{
+  display: none;
+}
+nav{
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: rgb(196, 30, 58, .4) ;
+}
+#content{
+  background-color: rgb(139, 94, 60, .4);
+  border: 5px solid rgb(139, 94, 60, .4);
 }
