@@ -27,8 +27,8 @@ button{
 }
 button:active img,
 button img{
+  background-image: url("../images/sticks.svg");
   position: absolute;
-  display: block;
   left: 34px;
   top: -40px;
   width: 64;
@@ -61,8 +61,7 @@ nav{
   border: 5px solid var(--wood-color-border);
   height: 100%;
 }
-#content > ol,
-#content > div{
+#content > .home-div{
   width: clamp(45ch,50%,75ch);
   background-color: rgb(224, 204, 181);
   border: 5px solid var(--wood-color-border);

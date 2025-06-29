@@ -9,6 +9,7 @@ export class InitialPageLoad{
   }
   static heading(){
     const div = document.createElement("div")
+    div.classList.add('home-div')
     const headingPara = document.createElement("p")
     const heading = document.createElement("h1")
     heading.textContent = "Doodles"
@@ -18,6 +19,7 @@ export class InitialPageLoad{
   }
   static openingHours(){
     const openingHoursList = document.createElement("ol")
+    openingHoursList.classList.add('home-div')
     const openingHoursHeading = document.createElement("h2")
     const lowerHeading = document.createElement("h2")
     openingHoursHeading.textContent = "You can visit us at these hours:"
@@ -41,6 +43,7 @@ export class InitialPageLoad{
   }
   static location(){
     const div = document.createElement("div")
+    div.classList.add("home-div")
     const locationHeading = document.createElement("h2")
     const locationPara = document.createElement("p")
     locationHeading.textContent = "Location"
