@@ -1,3 +1,7 @@
+:root{
+  --wood-color-background: rgb(139, 94, 60, .4);
+  --wood-color-border: rgb(139, 94, 60);
+}
 *,
 *::before,
 *::after{
@@ -11,7 +15,7 @@ body{
   background-size: cover;
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 3fr;
 }
 button{
   position: relative;
@@ -30,8 +34,13 @@ button img{
   width: 64;
   height: 64px;
 }
-button img.display-off{
+.hidden-element{
+  position: absolute;
   display: none;
+  left: 34px;
+  top: -40px;
+  width: 64;
+  height: 64px;
 }
 nav{
   display: flex;
@@ -43,7 +52,25 @@ nav{
   background-color: rgb(196, 30, 58, .4) ;
 }
 #content{
-  background-color: rgb(139, 94, 60, .4);
-  border: 5px solid rgb(139, 94, 60, .4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  background-color: var(--wood-color-background);
+  border: 5px solid var(--wood-color-border);
+  height: 100%;
 }
-#content > div{}
+#content > ol,
+#content > div{
+  width: clamp(45ch,50%,75ch);
+  background-color: rgb(224, 204, 181);
+  border: 5px solid var(--wood-color-border);
+  padding: 40px;
+}
+#content > ol{
+  list-style-type: none;
+}
+#content > ol li{
+  padding-left: 300px;
+}
