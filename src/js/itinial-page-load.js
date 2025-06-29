@@ -1,41 +1,54 @@
+import { eachItem } from "ajv/dist/compile/util"
+
 export class InitialPageLoad{
-  content = document.querySelector("#content")
-  headingPara = document.createElement("p")
-  openingHoursList = document.createElement("ol")
-  openingHoursHeading = document.createElement("h2")
-  heading = document.createElement("h1")
-  lowerHeading = document.createElement("h2")
+  static #content = document.querySelector("#content")
   static initialPageLoad(){
-    this.heading.textContent = "Doodles"
-    this.headingPara.textContent = "Welcome to our Doodles Noodles shop where we make the best noodles around, you can pick from all sorts of noodles here like  Fried Noodles, Dry Ramen, Classic Ramen, Instant Ramen and Pad Thai (Thai) so come and welcome us with your visit."
-    this.content.appendChild(this.heading)
-    this.content.appendChild(this.headingPara)
+    this.heading()
     this.openingHours()
+    this.location()
+  }
+  static heading(){
+    const div = document.createElement("div")
+    const headingPara = document.createElement("p")
+    const heading = document.createElement("h1")
+    heading.textContent = "Doodles"
+    headingPara.textContent = "Welcome to our Doodles Noodles shop where we make the best noodles around, you can pick from all sorts of noodles here like  Fried Noodles, Dry Ramen, Classic Ramen, Instant Ramen and Pad Thai (Thai) so come and welcome us with your visit."
+    this.appendChildren(div,heading,headingPara)
+    this.#content.appendChild(div)
   }
   static openingHours(){
-    this.openingHoursHeading.textContent = "You can visit us at these hours:"
-    this.openingHoursList.appendChild(this.openingHoursHeading)
-    this.lowerHeading.textContent = "Our Opening hours are"
+    const openingHoursList = document.createElement("ol")
+    const openingHoursHeading = document.createElement("h2")
+    const lowerHeading = document.createElement("h2")
+    openingHoursHeading.textContent = "You can visit us at these hours:"
+    openingHoursList.appendChild(openingHoursHeading)
+    lowerHeading.textContent = "Our Opening hours are"
     const weekDays = ["Monday","Tuesdy","Wednesday","Thursday","Friday","Saturday","Sunday"]
     for(let i = 0; i < 7; i++){
       if(i < 6){
-      this.listItemText(weekDays[i],"8-17")
+      listItemText(weekDays[i],"8-17")
       }else{
-      this.listItemText(weekDays[i],"10-18")
+      listItemText(weekDays[i],"10-18")
       }
     }
-    this.content.appendChild(this.openingHoursList)
-  }
-  static listItemText(day,openTime){
+    this.#content.appendChild(openingHoursList)
+
+    function listItemText(day,openTime){
     const listItem = document.createElement("li")
     listItem.textContent = `${day}: ${openTime}`
-    this.openingHoursList.appendChild(listItem)
+    openingHoursList.appendChild(listItem)
   }
-  static conacts(){
-    contactHeading = document.createElement("h2")
-    noodleChef = document.createElement("p")
-    noodlManager = document.createElement("p")
-    noodleReception = document.createElement("p")
-    contactHeading = "Contact us:"
+  }
+  static location(){
+    const div = document.createElement("div")
+    const locationHeading = document.createElement("h2")
+    const locationPara = document.createElement("p")
+    locationHeading.textContent = "Location"
+    locationPara.textContent = "723 Fernlight Way East Alderfield, Liora 82904 United Provinces of Velmara"
+    this.appendChildren(div,locationHeading,locationPara)
+    this.#content.appendChild(div)
+  }
+  static appendChildren(parent,...children){
+    children.forEach(item => parent.appendChild(item))
   }
 }
