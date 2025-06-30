@@ -1,6 +1,4 @@
 import { InitialPageLoad } from "./itinial-page-load"
-import tonkotsu from "../images/tonkotsu.png"
-import spicyNoodles from "../images/spicy-thai-noodles.jpg"
 export class Menu{
   static #content = document.querySelector('#content')
   static menuItemText = ["Classic Tonkotsu Ramen – $13.95","Spicy Thai Drunken Noodles – $12.95","Dan Dan Noodles (Sichuan Style) – $11.95","Vietnamese Pho (Beef or Chicken) – $13.50"]

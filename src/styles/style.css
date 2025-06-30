@@ -78,8 +78,16 @@ nav{
 #content > ol{
   list-style-type: none;
 }
+#content > ol h2,
+.home-div h1,
+.home-div h2{
+  margin-bottom: 10px;
+  text-align: center;
+}
 #content > ol li{
-  padding-left: 300px;
+  text-align: center;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--wood-color-border);
 }
 .menu-div{
   display: flex;
@@ -106,4 +114,14 @@ nav{
 }
 .menu-div p{
   font-size: .8rem;
+}
+.contacts-div{
+  height: 80%;
+  width: 60%;
+  background-color: rgb(224, 204, 181);
+  border: 5px solid var(--wood-color-border);
+  text-align: center;
+}
+.contacts-div h1{
+  margin: 8px 0 24px 0;
 }

@@ -25,7 +25,7 @@ export class InitialPageLoad{
     openingHoursHeading.textContent = "You can visit us at these hours"
     openingHoursList.appendChild(openingHoursHeading)
     lowerHeading.textContent = "Our Opening hours are"
-    const weekDays = ["Monday","Tuesdy","Wednesday","Thursday","Friday","Saturday","Sunday"]
+    const weekDays = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
     for(let i = 0; i < 7; i++){
       if(i < 6){
       listItemText(weekDays[i],"8-17")
