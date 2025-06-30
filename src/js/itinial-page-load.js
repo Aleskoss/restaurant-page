@@ -22,7 +22,7 @@ export class InitialPageLoad{
     openingHoursList.classList.add('home-div')
     const openingHoursHeading = document.createElement("h2")
     const lowerHeading = document.createElement("h2")
-    openingHoursHeading.textContent = "You can visit us at these hours:"
+    openingHoursHeading.textContent = "You can visit us at these hours"
     openingHoursList.appendChild(openingHoursHeading)
     lowerHeading.textContent = "Our Opening hours are"
     const weekDays = ["Monday","Tuesdy","Wednesday","Thursday","Friday","Saturday","Sunday"]

@@ -2,6 +2,14 @@
   --wood-color-background: rgb(139, 94, 60, .4);
   --wood-color-border: rgb(139, 94, 60);
 }
+@font-face {
+    font-family: 'kaushan_scriptregular';
+    src: url('../fonts/webfontkit-20250630-145122/kaushanscript-regular-webfont.woff2') format('woff2'),
+         url('../fonts/webfontkit-20250630-145122/kaushanscript-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 *,
 *::before,
 *::after{
@@ -72,4 +80,30 @@ nav{
 }
 #content > ol li{
   padding-left: 300px;
+}
+.menu-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  background-color: rgb(224, 204, 181);
+  border: 5px solid var(--wood-color-border);
+  width: 600px;
+  padding: 10px;
+}
+.menu-div div:first-child{
+  height: 100px;
+  width: 100px;
+  border: 5px solid var(--wood-color-border);;
+  margin: 10px;
+}
+.menu-div div:last-child{
+  width: clamp(45ch,50%,70ch);
+}
+.menu-div h1{
+  font-size: 1.2rem;
+  font-family: 'kaushan_scriptregular';
+}
+.menu-div p{
+  font-size: .8rem;
 }
