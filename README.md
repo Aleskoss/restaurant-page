@@ -1,2 +1,3 @@
 # restaurant-page
 In this project I will demonstrate my new learned skills, especially using Classess, constructors and ES6 modules as well as using webpack(bundler) to bundle the website content through npm(node package manager)
+I won`t spend much more time on this project, the styles could be better and it could be alot more styled but since this is not a portfolio project, I will be moving on to more learning and might revisit this at some point later
